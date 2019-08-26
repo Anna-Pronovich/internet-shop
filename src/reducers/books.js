@@ -1,26 +1,21 @@
 const initialState = {
-  books: [
-    {
-      id:0,
-      title: 'Hello World'
-    }
-  ]
+  isReady: false,
+  items: null
 };
-export default (state=initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'SET_BOOKS':
       return {
         ...state,
-        books: action.payload
+        items: action.payload,
+        isReady: true
       };
-    case 'ADD_BOOKS':
+    case 'SET_IS_READY':
       return {
-        books: [
-          ...state.books,
-          action.payload
-        ]
+          ...state, 
+          isReady: action.payload
       };  
     default:
-      return state
+      return state;
   }
-}
+};
