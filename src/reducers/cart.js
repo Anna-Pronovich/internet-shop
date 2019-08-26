@@ -12,7 +12,7 @@ export default (state=initialState, action) => {
     case 'REMOVE_BOOK':
       return {
           ...state,
-          items: state.items.filter(o => o.id != action.payload)
+          items: state.items.filter(o => o.id !== action.payload)
       };
     // break;  
     default:
