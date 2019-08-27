@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Input } from 'semantic-ui-react';
 
 const Filter = ({ setFilter, filterBy } ) => (
   <Menu secondary>
@@ -19,6 +19,9 @@ const Filter = ({ setFilter, filterBy } ) => (
           active={filterBy === 'author'}
           onClick={setFilter.bind(this, 'author')}
         >Author</Menu.Item>
+          <Menu.Item>
+            <Input icon="search" placeholder="Please enter your query"></Input>
+          </Menu.Item>
       </Menu>
 )
 
