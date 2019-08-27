@@ -4,8 +4,8 @@ import * as  filterActions from '../actions/filter';
 
 import Filter from '../components/Filter';
 
-const mapStateToProps = ({ books }) => ({
-  filterBy:  books.filterBy,
+const mapStateToProps = ({ books, filter }) => ({
+  filterBy:  filter.filterBy,
 })
 const mapDispatchToProps = dispatch => ({
   ...bindActionCreators(filterActions, dispatch),
